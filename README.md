@@ -1,1 +1,1 @@
-# spree-mylook-theme
+# mylook
