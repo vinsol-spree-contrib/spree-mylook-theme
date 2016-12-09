@@ -1,0 +1,47 @@
+.logo {
+  color: $primary-hover;
+  display: inline-block;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  min-width: 150px;
+}
+
+.header-top {
+  @include genericSidesStyles('bottom', 1px solid $primary-border, 'border');
+  padding: 15px;
+}
+
+.menu-toggle-btn {
+  @include genericSidesStyles('top', 13px, 'margin');
+  color: $primary-black;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cart-icon {
+  @include genericSidesStyles('top', 12px, 'margin');
+  display: inline-block;
+}
+
+.header-bottom {
+  @include genericSidesStyles('bottom', 1px solid $primary-border, 'border');
+  height: 40px;
+  padding: 0 15px;
+}
+
+.main-search-btn,
+.login-btn {
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  .material-icons {
+    font-size: 20px;
+  }
+}
+
+.login-btn {
+  .material-icons {
+    margin-right: 3px;
+  }
+}

@@ -1,0 +1,15 @@
+// Import All Files Here
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "core/fonts.scss";
+@import "core/colors.scss";
+@import "core/mixins.scss";
+@import "core/classes.scss";
+@import "core/global.scss";
+@import "components/global-header.scss";
+@import "components/global-navigation.scss";
+@import "components/global-footer.scss";
+@import "components/global-menu.scss";
+@import "components/search.scss";
+@import "pages/home.scss";

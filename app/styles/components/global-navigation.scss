@@ -1,0 +1,16 @@
+.primary-navigation {
+  .nav-item {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    + .nav-item {
+      @include genericSidesStyles('left', 25px, 'margin');
+    }
+  }
+
+  .nav-item-anchor {
+    @include genericStyles('font-size', 13px);
+    font-family: 'Montserrat-Light';
+    letter-spacing: .5px;
+  }
+}

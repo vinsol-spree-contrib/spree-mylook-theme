@@ -1,0 +1,112 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: $primary-black;
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-25 {
+  margin-top: 25px;
+}
+
+.p-t-30 {
+  padding-top: 30px;
+}
+
+.p-t-50 {
+  padding-top: 50px;
+}
+
+.font-light {
+  font-family: 'Montserrat-Light';
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.img-full {
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.container-5px {
+  padding: 0 5px;
+  .row-5px {
+    margin: 0 -5px;
+    .col-5px {
+      padding: 5px;
+    }
+  }
+}
+
+.truncate {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-cart {
+  background: $transparent;
+  border: 1px solid $primary-white;
+  color: $primary-white;
+  font-size: 16px;
+  min-width: 150px;
+  height: 40px;
+  line-height: 26px;
+  @include animate(.35s);
+  &:hover {
+    background: $primary-white;
+    color: rgba(234,160,1,.8);
+  }
+}
+
+.btn-view-all {
+  color: $primary-white;
+  background: $primary-hover;
+  border-color: $primary-hover;
+  padding: 0 15px;
+  font-size: 15px;
+  letter-spacing: .5px;
+  height: 40px;
+  line-height: 38px;
+  @include animate(.35s);
+  &:hover {
+    background: $transparent;
+    color: $primary-hover;
+  }
+}
