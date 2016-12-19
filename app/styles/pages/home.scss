@@ -1,18 +1,123 @@
 $image-url : '../../images/';
 
 .main-banner {
-  background: url($image-url + 'banner.jpg') no-repeat;
-  background-size: cover;
-  height: 475px;
+  height: 600px;
   position: relative;
   display: table;
   width: 100%;
+  z-index: 0;
+  padding-top: 60px;
+  @include genericSidesStyles('top', -60px, 'margin');
+  .item {
+    height: 600px;
+    @include genericSidesStyles('top', 80px, 'padding');
+  }
+  .item01 {
+    background: url($image-url + 'banner_01.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .item02 {
+    background: url($image-url + 'banner_02.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .item03 {
+    background: url($image-url + 'banner_03.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .box-outer {
+    @include genericSidesStyles('', 1px solid $primary-black, 'border');
+    @include rotate(45)
+    height: 348px;
+    width: 348px;
+    margin: 75px auto 0;
+  }
+  .box-inner {
+    @include genericSidesStyles('', 1px solid #9ea0a1, 'border');
+    @include genericSidesStyles('', 3px, 'margin');
+    @include rotate(90)
+    height: 340px;
+    width: 340px;
+    background: #c7cbcc;
+    .banner-text {
+      @include genericSidesStyles('', 45px 0 0 20px, 'margin');
+      @include rotate(225);
+      font-size: 18px;
+      h3 {
+        font-size: 20px;
+      }
+      .divider {
+        height: 1px;
+        font-size: 1px;
+        background: $primary-black;
+        max-width: 250px;
+        margin: 0 auto 30px;
+        span {
+          background: #c7cbcc;
+          font-size: 11px;
+          position: relative;
+          top: -5px;
+          width: 25px;
+          text-align: center;
+          display: inline-block;
+        }
+      }
+      h1 {
+        font-family: 'Avenir-Light';
+        font-size: 29px;
+      }
+      p {
+        span {
+          font-size: 18px;
+          font-family: 'Avenir-Book';
+          font-weight: bold;
+        }
+      }
+      .btn-banner {
+        background: $primary-black;
+        color: $primary-white;
+        padding: 0 20px;
+        width: auto;
+      }
+    }
+  }
+  #myCarousel {
+    height: 600px;
+    .carousel-control {
+      padding-top: 290px;
+      font-size: 40px;
+      position: absolute;
+      z-index: 99;
+      &.left {
+        .icon {
+          @include genericSidesStyles('', -16px, 'top');
+          @include rotate(180);
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+    .carousel-inner {
+      height: 600px;
+      @include genericSidesStyles('top', -60px, 'margin');
+    }
+  }  
 }
 
 .banner-content {
+  background-size: cover;
   display: table-cell;
   position: relative;
   z-index: 2;
+  @include genericSidesStyles('top', 60px, 'padding');
 }
 
 .banner-heading {
