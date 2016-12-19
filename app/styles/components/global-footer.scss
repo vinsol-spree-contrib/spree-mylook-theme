@@ -1,0 +1,61 @@
+.primary-footer {
+  @include genericSidesStyles('top', 2px solid $primary-black, 'border');
+  padding-top: 50px;
+  color: $primary-black;
+  margin-bottom: 50px;
+  .logo,
+  h2, h6 {
+    @include genericSidesStyles('top', 0, 'margin');
+  }
+  h2 {
+    font-size: 20px;
+    @include genericSidesStyles('bottom', 20px, 'margin'); 
+  }
+  p {
+    opacity: .6;
+    font-size: 16px;
+  }
+  h6 {
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  .social-media {
+    a {
+      font-size: 20px;
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+.secondary-footer {
+  margin-bottom: 50px;
+  color: $primary-black;
+  h3 {
+    @include genericSidesStyles('top', 0, 'margin');
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  ul {
+    @include genericSidesStyles('left', 0, 'padding');
+    li {
+      list-style: none;
+      line-height: 26px;
+    }
+  }
+  .phone-number {
+    font-size: 34px;
+    text-align: right;
+    i {
+      position: relative;
+      top: 15px;
+      font-size: 50px;
+    }
+  }
+}
+
+.lower-footer {
+  @include genericSidesStyles('top', 1px solid rgba($primary-black, .2), 'border');
+  text-align: center;
+  padding: 30px 0 20px;
+  opacity: .5;
+}
