@@ -155,21 +155,7 @@ $image-url : '../../images/';
 .decorated-heading {
   font-family: 'Avenir-Light';
   font-size: 30px;
-  span {
-    margin: 0;
-    padding: 0 0 10px 0;
-    position: relative;
-    display: inline-block;
-      &:before {
-      background: $primary-hover;
-      bottom: -12px;
-      content: ' ';
-      height: 2px;
-      left: 0;
-      position: absolute;
-      width: 60px;
-    }
-  }
+  text-transform: uppercase;
 
   .btn-view-all {
     margin-top: 5px;
@@ -191,25 +177,19 @@ $image-url : '../../images/';
 
 .product-container {
   background: $primary-white;
-  min-height: 290px;
-  padding: 10px 20px;
+  min-height: 450px;
+  padding: 0;
   position: relative;
   overflow: hidden;
   @include animate(.75s);
 
   .product-container-inner {
     @extend .full-absolute;
+    max-height: 360px;
     opacity: 0;
     visibility: hidden;
-    background: rgba(234,160,1,.8);
+    background: rgba(#c6c3bd,.6);
     @include animate(.75s cubic-bezier(0.5,1,0.05,1.0));
-  }
-
-  .btn-cart {
-    top: -40px;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -75px;
   }
 
   .product-options {
@@ -220,21 +200,22 @@ $image-url : '../../images/';
     left: 0;
     opacity: 0;
     visibility: hidden;
-    .material-icons {
-      width: 35px;
-      height: 35px;
+    .icons {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      border: 1px solid #fff;
-      font-size: 20px;
-      color: #fff;
-      line-height: 33px;
+      border: 1px solid #978675;
+      font-size: 22px;
+      color: $primary-black;
+      line-height: 50px;
       margin: 0 5px;
+      display: inline-block;
       @include animate(.35s);
-      background: $primary-white;
-      color: rgba(234,160,1,.8);
+      background: rgba(#b1a599, .6);
+      color: rgba($primary-black,.6);
       &:hover {
-        background: $transparent;
-        color: #fff;
+        background: #b1a599;
+        color: $primary-black;
       }
     }
   }
@@ -247,21 +228,32 @@ $image-url : '../../images/';
       visibility: visible;
     }
 
-    .btn-cart {
-      top: 33%;
-    }
-
     .product-options {
-      bottom: 33%;
+      bottom: 28%;
+    }
+    .product-name {
+      color: #a1764e;
     }
   }
 
   .product-name {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0;
     padding: 10px 0;
     line-height: 28px;
     @extend .truncate;
     max-width: 100%;
+  }
+  .product-price {
+    font-size: 25px;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 28px;
+    max-width: 100%;
+    color: $primary-black;
+    font-weight: bold;
+    &:nth-letter(3) {
+      color: #999;
+    }
   }
 }

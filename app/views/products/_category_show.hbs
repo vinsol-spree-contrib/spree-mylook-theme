@@ -1,8 +1,7 @@
 <section class="category-section">
   <div class="container container-5px">
     <h3 class="decorated-heading">
-      <span>My Look with latest fasion</span>
-      <a href="javascript:void(0);" class="btn btn-view-all pull-right">View all products</a>
+      My Look with latest fasion
     </h3>
     <div class="row p-t-30 row-5px">
       {{#each products}}
@@ -11,14 +10,16 @@
             <p><img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full"></p>
             <h3 class="product-name">{{name}}</h3>
             <div class="product-container-inner">
-              <a href="javascript:void(0);" class="btn btn-cart">Add To Cart</a>
               <div class="product-options text-center">
-                <a href="javascript:void(0);">
-                  <i class="material-icons">favorite</i>
-                </a>
-                <a href="javascript:void(0);">
-                  <i class="material-icons">remove_red_eye</i>
-                </a>
+                <p>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-shopping-cart"></i>
+                  </a>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-favorite"></i>
+                  </a>
+                </p>
+                <p class="product-price">{{price}}</p>  
               </div>
             </div>
           </div>  
@@ -26,7 +27,8 @@
       {{/each}}
     </div>  
   </div>
-</section>  
+</section>
+<script type="text/javascript" href="../scripts/design.js"></script>
 <!-- <section class="category-section">
   <div class="container container-5px">
     <h3 class="decorated-heading">
