@@ -1,0 +1,36 @@
+{{> header}}
+{{> menu_container}}
+{{> cart}}
+{{> main_banner}}
+<section class="category-section">
+  <div class="container container-5px">
+    <h3 class="decorated-heading">
+      Kids
+    </h3>
+    <div class="row p-t-30 row-5px">
+      {{#each products}}
+        <div class="col-md-3 text-center col-5px">
+          <div class="product-container">
+            <p><img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full"></p>
+            <h3 class="product-name">{{name}}</h3>
+            <div class="product-container-inner">
+              <div class="product-options text-center">
+                <p>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-shopping-cart"></i>
+                  </a>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-favorite"></i>
+                  </a>
+                </p>
+                <p class="product-price">{{price}}</p>  
+              </div>
+            </div>
+          </div>  
+        </div>
+      {{/each}}
+    </div>  
+  </div>
+</section>
+
+{{> footer}}

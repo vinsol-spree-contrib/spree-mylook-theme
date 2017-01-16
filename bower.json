@@ -1,9 +1,8 @@
 {
-  "name": "spree-themes",
+  "name": "myloook",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "spree-frontend-integration": "/Users/vijayta/spree-themes-integration#api"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -17,5 +16,19 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
-  }
+  },
+  "homepage": "https://github.com/vinsol-spree-contrib/spree-mylook-theme",
+  "authors": [
+    "vijayta"
+  ],
+  "description": "fation site",
+  "main": "index",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

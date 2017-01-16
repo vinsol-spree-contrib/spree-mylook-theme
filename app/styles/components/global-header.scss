@@ -16,10 +16,14 @@
       font-size: 16px;
       margin: 0 15px;
       &.cart-icon, 
-      &.login-btn {
-        margin: 0 15px;
+      &.login-btn,
+      &.signup-btn {
+        margin: 0 0 0 15px;
         padding: 0;
         line-height: inherit;
+      }
+      &.signup-btn {
+        margin: 0 15px 0 0;
       }
       .icon-shopping-bag {
         font-size: 20px;
@@ -27,6 +31,11 @@
       .icon-drop-down-arrow {
         font-size: 12px;
       }
+    }
+    .bar {
+      float: right;
+      line-height: 25px;
+      margin: 0 2px;
     }
   }
   #search-input {

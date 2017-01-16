@@ -22,11 +22,12 @@ function renderFreshArrivalPage(responseText){
 function renderTemplate(){
   var path = window.location.pathname.split('/')[1]
   if(path == ''){
-    (new SpreeApi.productsList()).sendRequest({cb: renderIndexPage})
+    // (new SpreeApi.productsList()).sendRequest({cb: renderIndexPage})
+    (new SpreeApi.productsList()).sendRequest({params:{ per_page: 4}})
   }
 
   if(path == 'men'){
-    (new SpreeApi.productsList()).sendRequest({cb: renderMenPage})
+    (new SpreeApi.productsList()).sendRequest({params:{ per_page: 4, page: 1}, cb: renderMenPage})
   }
 
   if(path == 'women'){
