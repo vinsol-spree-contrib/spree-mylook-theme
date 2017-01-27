@@ -1,0 +1,17 @@
+<section class="recently-view-section">
+  <div class="container container-5px">
+    <h3 class="decorated-heading">
+      recently viewed
+    </h3>
+    <div class="owl-carousel owl-theme">
+      {{#each products}}
+        <div class="item">
+          <div class="product-container">
+            <p><img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full"></p>
+            <h3 class="product-name"><a href='{{productUrl}}'>{{name}}</a></h3>
+          </div>  
+        </div>
+      {{/each}}
+    </div>  
+  </div>
+</section>  

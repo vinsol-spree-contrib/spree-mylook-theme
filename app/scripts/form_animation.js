@@ -1,5 +1,5 @@
 $(function () {
-  $('.input_animate input').blur(function() {
-    alert('Hello');
-  });  
+  $("input.input_field").blur(function() {
+    $(this).parent().addClass('input_filled');
+  });
 });
