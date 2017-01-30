@@ -156,14 +156,15 @@ $image-url : '../../images/';
   font-family: 'Avenir-Light';
   font-size: 30px;
   text-transform: uppercase;
-
+  padding: 0 10px;
+  margin: 0 0 20px;
   .btn-view-all {
     margin-top: 5px;
   }
 }
 
 .category-section {
-  padding: 50px 0;
+  padding: 50px 0 0;
 }
 
 .category-section-all {
