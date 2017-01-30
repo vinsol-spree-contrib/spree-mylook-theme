@@ -261,7 +261,7 @@ $image-url : '../../images/';
   }
 }
 .ads-section {
-  margin: 50px 0;
+  margin: 0 0 50px;
   img {
     max-width: 100%;
   }
@@ -314,6 +314,25 @@ $image-url : '../../images/';
       position: absolute;
       right: -12px;
       margin-top: -5px;
+    }
+  }
+}
+.category-section {
+  .category-item {
+    padding: 10px;
+    position: relative;
+    .category-name {
+      position: absolute;
+      background: rgba($primary-black, .5);
+      color: $primary-white;
+      font-size: 20px;
+      text-transform: uppercase;
+      bottom: 30px;
+      right: 10px;
+      padding: 12px 25px 8px;
+    }
+    img {
+      width: 100%;
     }
   }
 }
