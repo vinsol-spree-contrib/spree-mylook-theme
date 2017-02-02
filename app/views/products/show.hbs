@@ -1,6 +1,33 @@
 {{> header}}
-{{> menu_container}}
-{{> cart}}
-<h1>Show page</h1>
+
+<section class="product-show-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="flexslider">
+          <ul class="slides">
+            {{#each images}}
+              <li data-thumb="{{large_url}}">
+                <img src="{{large_url}}">
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        {{product.name}}
+        
+        {{#each productProperties}}
+          <li>
+            {{property_name}} : {{value}}
+          </li>
+        {{/each}}
+
+        {{product.description}}
+      </div>
+    </div>
+  </div>
+</section>
 
 {{> footer}}
