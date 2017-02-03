@@ -186,6 +186,8 @@ $image-url : '../../images/';
   .img-full {
     width: 288px;
     height: 365px;
+    max-width: 100%;
+    max-height: 100%;
   }
   .product-container-inner {
     @extend .full-absolute;

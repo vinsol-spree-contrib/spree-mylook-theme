@@ -63,9 +63,6 @@ function renderTemplate() {
   if(path == 'fresh_arrival'){
     (new SpreeApi.productsList()).sendRequest({cb: renderFreshArrivalPage})
   }
-  // if(path == 'product_show'){
-  //   (new SpreeApi.productShow()).sendRequest({params:{ id: productShow}, cb: renderShowPage})
-  // }
   switch(path) {
     case 'categories' : (new SpreeApi.taxonomyList()).sendRequest({cb: renderCategoryPage});
     break;

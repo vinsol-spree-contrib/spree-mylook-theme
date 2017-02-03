@@ -1,33 +1,70 @@
-{{> header}}
+<div class="show_page">
+  {{> header}}
 
-<section class="product-show-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="flexslider">
-          <ul class="slides">
-            {{#each images}}
-              <li data-thumb="{{large_url}}">
-                <img src="{{large_url}}">
-              </li>
-            {{/each}}
-          </ul>
+  <section class="product-show-page">
+    <div class="container">
+      <div class="row">
+        <div class="breadcrumb">
+          <a href="#"> < Back To Kirtas & Kurties</a>
         </div>
+        <div class="col-md-6">
+          <div class="flexslider">
+            <ul class="slides">
+              {{#each images}}
+                <li data-thumb="{{large_url}}">
+                  <img src="{{large_url}}">
+                </li>
+              {{/each}}
+            </ul>
+          </div>
 
-      </div>
-      <div class="col-md-6">
-        {{product.name}}
-        
-        {{#each productProperties}}
-          <li>
-            {{property_name}} : {{value}}
-          </li>
-        {{/each}}
+        </div>
+        <div class="col-md-6 show-page-desc">
+          <h2>{{product.name}}</h2>
+          <div class="size">
+            <span class="label">Select Size</span>
+            <span>s</span>
+            <span>m</span>
+            <span>l</span>
+            <span>xl</span>
+            <span class="size-chart">size chart</span>
+          </div>
+          <p class="colors">
+            <span class="label">Select Color</span>
+            <span class="red"></span>
+            <span class="green"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+          </p>
+          <p class="price">
+            <span class='actual-price'>$30.<sup>98</sup></span>
+            <span class="discounted-price">{{product.price}}</span>
+          </p>
+          <div class="tabs">
+            <div class="tab">
+              <input type="radio" id="tab-2" name="tab-group-1">
+              <label for="tab-2">Product details</label>
+              <div class="content">
+                {{#each productProperties}}
+                  <li>
+                    {{property_name}} : {{value}}
+                  </li>
+                {{/each}}
+              </div> 
+            </div>
+            <div class="tab">
+              <input type="radio" id="tab-3" name="tab-group-1">
+              <label for="tab-3">Material &amp; Care</label>
+              <div class="content">
+                {{product.description}}
+              </div> 
+            </div>
+          </div>
 
-        {{product.description}}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-{{> footer}}
+  {{> footer}}
+</div>  
