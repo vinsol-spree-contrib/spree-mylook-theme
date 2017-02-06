@@ -30,24 +30,27 @@
         </div>
         <div class="col-md-6 show-page-desc">
           <h2>{{product.name}}</h2>
-          <div class="size">
-            <span class="label">Select Size</span>
-            <span>s</span>
-            <span>m</span>
-            <span>l</span>
-            <span>xl</span>
+          <div class="size-block">
+            <span class="label">select size</span>
+            <span class="size">s</span>
+            <span class="size">m</span>
+            <span class="size">l</span>
+            <span class="size">xl</span>
             <span class="size-chart">size chart</span>
           </div>
           <p class="colors">
-            <span class="label">Select Color</span>
-            <span class="red"></span>
-            <span class="green"></span>
-            <span class="blue"></span>
-            <span class="pink"></span>
+            <span class="label">select color</span>
+            <span class="color red"></span>
+            <span class="color green"></span>
+            <span class="color blue"></span>
+            <span class="color pink"></span>
           </p>
           <p class="price">
             <span class='actual-price'>$30.<sup>98</sup></span>
-            <span class="discounted-price">{{product.price}}</span>
+            <span class="discounted-price">${{product.price}}</span>
+          </p>
+          <p class="button">
+            <input type="button" name="buy-now" value="buy now" class="btn-buy"/>
           </p>
           <div class="tabs">
             <div class="tab">
@@ -74,6 +77,6 @@
       </div>
     </div>
   </section>
-
+  {{> recently_viewed}}
   {{> footer}}
 </div>  
