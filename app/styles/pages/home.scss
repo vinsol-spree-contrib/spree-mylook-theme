@@ -270,6 +270,11 @@ $image-url : '../../images/';
   }
 }
 .recently-view-section {
+  margin: 0;
+  padding: 0;
+  .container {
+    padding: 0 18px;
+  }
   .product-container {
     min-height: auto ;
     .img-full {

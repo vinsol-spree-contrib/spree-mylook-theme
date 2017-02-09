@@ -8,71 +8,11 @@
           <a href="#"> < Back To Kirtas & Kurties</a>
         </div>
         <div class="col-md-6">
-          <!-- <div class="flexslider">
-            <ul class="slides">
-              {{#each images}}
-                <li data-thumb="{{large_url}}">
-                  <img src="{{large_url}}">
-                </li>
-              {{/each}}
-            </ul>
-          </div> -->
-
-          <ul class="enlarge">
-            {{#each images}}
-              <li data-thumb="{{large_url}}">
-                <img src="{{small_url}}" width="150px" height="100px" alt="{{product.name}}" class="thumbnail-image" />
-                <img src="{{large_url}}" alt="{{product.name}}" class="big-image" />
-              </li>
-            {{/each}}
-          </ul>
-
+          {{> show_left_content}}
         </div>
-        <div class="col-md-6 show-page-desc">
-          <h2>{{product.name}}</h2>
-          <div class="size-block">
-            <span class="label">select size</span>
-            <span class="size">s</span>
-            <span class="size">m</span>
-            <span class="size">l</span>
-            <span class="size">xl</span>
-            <span class="size-chart">size chart</span>
-          </div>
-          <p class="colors">
-            <span class="label">select color</span>
-            <span class="color red"></span>
-            <span class="color green"></span>
-            <span class="color blue"></span>
-            <span class="color pink"></span>
-          </p>
-          <p class="price">
-            <span class='actual-price'>$30.<sup>98</sup></span>
-            <span class="discounted-price">${{product.price}}</span>
-          </p>
-          <p class="button">
-            <input type="button" name="buy-now" value="buy now" class="btn-buy"/>
-          </p>
-          <div class="tabs">
-            <div class="tab">
-              <input type="radio" id="tab-2" name="tab-group-1">
-              <label for="tab-2">Product details</label>
-              <div class="content">
-                {{#each productProperties}}
-                  <li>
-                    {{property_name}} : {{value}}
-                  </li>
-                {{/each}}
-              </div> 
-            </div>
-            <div class="tab">
-              <input type="radio" id="tab-3" name="tab-group-1">
-              <label for="tab-3">Material &amp; Care</label>
-              <div class="content">
-                {{product.description}}
-              </div> 
-            </div>
-          </div>
 
+        <div class="col-md-6 show-page-desc">
+          {{> show_right_content}}
         </div>
       </div>
     </div>
