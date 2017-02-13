@@ -15,7 +15,7 @@
       float: right;
       font-size: 16px;
       margin: 0 15px;
-      &.cart-icon, 
+      &.cart-icon,
       &.login-btn,
       &.signup-btn {
         margin: 0 0 0 15px;
@@ -41,6 +41,22 @@
   #search-input {
     @include genericSidesStyles('bottom', 1px solid $primary-border, 'border');
     border-radius: 0;
+  }
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    width: 300px;
+    padding: 0;
+    margin-top: -2px;
+    max-height: 400px;
+    overflow: auto;
+    > li {
+      > a {
+        float: none;
+        padding: 10px 15px;
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -83,7 +99,7 @@
   footer {
     &.primary-footer,
     &.secondary-footer {
-      .text-right, 
+      .text-right,
       .phone-number {
         text-align: left;
       }
@@ -113,7 +129,7 @@
         }
       }
     }
-  }  
+  }
 }
 
 @media only screen and (max-width: 767px) {

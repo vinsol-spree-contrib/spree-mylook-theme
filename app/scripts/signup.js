@@ -14,3 +14,20 @@
 //     SignupModal();
 //   });
 // });
+
+$(document).ready(function() {
+  $('#wrapper').on('submit', '#sign-up', function(event) {
+    (new SpreeApi.signUp()).sendRequest({params: {
+      user: {
+        email: $('#user_id').val(),
+        password: $('#user_pwd').val()
+      }
+    }, cb: handleSuccess});
+    event.preventDefault();
+  });
+
+  function handleSuccess(response) { 
+    var message = 'Your account has been successfully created. Please Login to continue.';
+    $('#flash').html(message);
+  };
+});
