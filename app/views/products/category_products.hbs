@@ -5,24 +5,30 @@
       {{#each products}}
         <div class="col-md-3 text-center col-5px">
           <div class="product-container">
-            <h3 class="product-name">{{name}}</h3>
-            <h4 class="product-price">${{price}}</h4>
+            <p>
+              <img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full">
+            </p>
+            <h3 class="product-name">
+              <a href={{#productUrl id}}{{body}}{{/productUrl}}>{{name}}</a>
+            </h3>
             <div class="product-container-inner">
-              <a href="javascript:void(0);" class="btn btn-cart">Add To Cart</a>
               <div class="product-options text-center">
-                <a href="javascript:void(0);">
-                  <i class="material-icons">favorite</i>
-                </a>
-                <a href={{#productUrl id}}{{body}}{{/productUrl}}>
-                  <i class="material-icons">remove_red_eye</i>
-                </a>
+                <p>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-shopping-cart"></i>
+                  </a>
+                  <a href="javascript:void(0);">
+                    <i class="icons icon-favorite"></i>
+                  </a>
+                </p>
+                <p class="product-price">{{price}}</p>
               </div>
             </div>
           </div>
         </div>
       {{/each}}
-    </div>  
-  </section>  
+    </div>
+  </section>
 
   {{> footer}}
-</div>  
+</div>

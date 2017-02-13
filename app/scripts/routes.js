@@ -3,32 +3,32 @@ function renderIndexPage(responseText){
   document.querySelector('#wrapper').innerHTML = MyApp.html.index({products: responseText['products'], images: responseText['images']});
 };
 
-function renderMenPage(responseText){
-  document.querySelector('#wrapper').innerHTML = MyApp.html.men({products: responseText['products'], images: responseText['images']});
-};
+// function renderMenPage(responseText){
+//   document.querySelector('#wrapper').innerHTML = MyApp.html.men({products: responseText['products'], images: responseText['images']});
+// };
 
-function renderWomenPage(responseText){
-  document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
-};
+// function renderWomenPage(responseText){
+//   document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
+// };
 
-function renderKidsPage(responseText){
-  document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
-};
+// function renderKidsPage(responseText){
+//   document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
+// };
 
-function renderSalesPage(responseText){
-  document.querySelector('#wrapper').innerHTML = MyApp.html.sales({products: responseText['products'], images: responseText['images']});
-};
+// function renderSalesPage(responseText){
+//   document.querySelector('#wrapper').innerHTML = MyApp.html.sales({products: responseText['products'], images: responseText['images']});
+// };
 
-function renderFreshArrivalPage(responseText){
-  document.querySelector('#wrapper').innerHTML = MyApp.html.fresh_arrival({products: responseText['products'], images: responseText['images']});
-};
+// function renderFreshArrivalPage(responseText){
+//   document.querySelector('#wrapper').innerHTML = MyApp.html.fresh_arrival({products: responseText['products'], images: responseText['images']});
+// };
 
 function renderCategoryPage(responseText) {
   document.querySelector('#wrapper').innerHTML = MyApp.html.categories({categories: responseText['taxonomies']});
 };
 
 function renderCategoryProductsPage(responseText) {
-  document.querySelector('#wrapper').innerHTML = MyApp.html.category_products({products: responseText['products']});
+  document.querySelector('#wrapper').innerHTML = MyApp.html.category_products({products: responseText['products'], images: responseText['images']});
 };
 
 function renderProductShowPage(responseText) {

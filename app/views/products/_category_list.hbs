@@ -1,0 +1,17 @@
+<section class="category-list">
+  <div class="container container-5px">
+    <div class="row">
+      <ul>
+        {{#each categories}}
+          <li>
+            <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
+              {{name}}
+            </a>
+            <p><img src="../images/category_{{id}}.png  " /></p>
+
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>
