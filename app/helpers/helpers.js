@@ -3,9 +3,13 @@ Handlebars.registerHelper('productUrl', function(id) {
 });
 
 Handlebars.registerHelper('productImageUrl', function(image_ids, images) {
-  return images.find(function(elem){return elem.id == image_ids[0]}).large_url;
+  return images.find(function(elem) { return elem.id == image_ids[0]}).large_url;
 });
 
 Handlebars.registerHelper('productCategoryUrl', function(id) {
   return 'category_products/' + id
+});
+
+Handlebars.registerHelper('category_products', function(image_ids, images) {
+  return name.find(function(elem){ return elem.slug == parent[0]});
 });

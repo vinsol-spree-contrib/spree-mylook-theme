@@ -2,15 +2,29 @@
   <div class="container container-5px">
     <div class="row">
       <ul>
-        {{#each categories}}
+        <!-- {{#each categories}}
           <li>
             <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
               {{name}}
             </a>
-            <p><img src="../images/category_{{id}}.png  " /></p>
+
+            <p><img src="../images/category_{{id}}.jpg" /></p>
 
           </li>
+        {{/each}} -->
+        {{#each categoryName}}
+          <li>
+          <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
+              <span class="name">{{name}}</span><br />
+              <p><img src="../images/category_{{id}}.jpg" /></p>
+             <!--  pretty name: {{pretty_name}}<br />
+              ID: {{id}}<br />
+              Parent ID: {{parent_id}} -->
+          </a>
+          </li>
         {{/each}}
+
+
       </ul>
     </div>
   </div>

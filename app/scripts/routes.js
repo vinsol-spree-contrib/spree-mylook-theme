@@ -2,37 +2,36 @@ import { SpreeApi } from './../../bower_components/spree-frontend-integration/li
 function renderIndexPage(responseText){
   document.querySelector('#wrapper').innerHTML = MyApp.html.index({products: responseText['products'], images: responseText['images']});
 };
+function renderProductShowPage(responseText) {
+  document.querySelector('#wrapper').innerHTML = MyApp.html.show({product: responseText.product, productProperties: responseText.product_properties, images: responseText['images']});
+};
 
-// function renderMenPage(responseText){
-//   document.querySelector('#wrapper').innerHTML = MyApp.html.men({products: responseText['products'], images: responseText['images']});
-// };
+function renderMenPage(responseText){
+  document.querySelector('#wrapper').innerHTML = MyApp.html.men({products: responseText['products'], images: responseText['images']});
+};
 
-// function renderWomenPage(responseText){
-//   document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
-// };
+function renderWomenPage(responseText){
+  document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
+};
 
-// function renderKidsPage(responseText){
-//   document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
-// };
+function renderKidsPage(responseText){
+  document.querySelector('#wrapper').innerHTML = MyApp.html.women({products: responseText['products'], images: responseText['images']});
+};
 
-// function renderSalesPage(responseText){
-//   document.querySelector('#wrapper').innerHTML = MyApp.html.sales({products: responseText['products'], images: responseText['images']});
-// };
+function renderSalesPage(responseText){
+  document.querySelector('#wrapper').innerHTML = MyApp.html.sales({products: responseText['products'], images: responseText['images']});
+};
 
-// function renderFreshArrivalPage(responseText){
-//   document.querySelector('#wrapper').innerHTML = MyApp.html.fresh_arrival({products: responseText['products'], images: responseText['images']});
-// };
+function renderFreshArrivalPage(responseText){
+  document.querySelector('#wrapper').innerHTML = MyApp.html.fresh_arrival({products: responseText['products'], images: responseText['images']});
+};
 
 function renderCategoryPage(responseText) {
-  document.querySelector('#wrapper').innerHTML = MyApp.html.categories({categories: responseText['taxonomies']});
+  document.querySelector('#wrapper').innerHTML = MyApp.html.categories({categories: responseText['taxonomies'], categoryName: responseText.taxons});
 };
 
 function renderCategoryProductsPage(responseText) {
-  document.querySelector('#wrapper').innerHTML = MyApp.html.category_products({products: responseText['products'], images: responseText['images']});
-};
-
-function renderProductShowPage(responseText) {
-  document.querySelector('#wrapper').innerHTML = MyApp.html.show({product: responseText.product, productProperties: responseText.product_properties, images: responseText['images']});
+  document.querySelector('#wrapper').innerHTML = MyApp.html.category_products({products: responseText['products'], category_name: responseText.category_name, images: responseText['images']});
 };
 
 function renderTemplate() {
@@ -68,7 +67,7 @@ function renderTemplate() {
     break;
     case 'product' : (new SpreeApi.productShow()).sendRequest({cb: renderProductShowPage, params: { id: id }});
     break;
-    case 'category_products' : (new SpreeApi.productsList()).sendRequest({cb: renderCategoryProductsPage, params: { q: { taxons_taxonomy_id_eq: category_id }}});
+    case 'category_products' : (new SpreeApi.productsList()).sendRequest({cb: renderCategoryProductsPage, params: { q: { taxons_taxonomy_id_eq: category_id, category_name: name }}});
     break;
     default : (new SpreeApi.productsList()).sendRequest({cb: renderIndexPage});
   }
