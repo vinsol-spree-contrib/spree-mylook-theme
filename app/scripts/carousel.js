@@ -6,9 +6,9 @@ $(function() {
     e.stopPropagation();
     var goTo = $(this).data('slide');
     if(goTo=="prev") {
-        $('#carousel-id').carousel('prev'); 
+        $('#carousel-id').carousel('prev');
     } else {
-        $('#carousel-id').carousel('next'); 
+        $('#carousel-id').carousel('next');
     }
   });
 

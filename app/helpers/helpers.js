@@ -10,6 +10,12 @@ Handlebars.registerHelper('productCategoryUrl', function(id) {
   return 'category_products/' + id
 });
 
-Handlebars.registerHelper('category_products', function(image_ids, images) {
-  return name.find(function(elem){ return elem.slug == parent[0]});
+Handlebars.registerHelper('getChildCategories', function(allCategories, parentId) {
+  var categories = []
+  $.each(allCategories, function(index, category){
+    if(category.parentId === parentId){
+      categories.push(category)
+    }
+  });
+  return categories;
 });

@@ -18,7 +18,7 @@ import { SpreeApi } from './../../bower_components/spree-frontend-integration/li
 
 // $(function() {
 //   var $login         = $('#loginSubmit'),
-//       $loginEmail    = $('#loginEmail'), 
+//       $loginEmail    = $('#loginEmail'),
 //       $loginPassword = $('#loginPassword');
 
 //   $('#loginSubmit').on('click', function() {
@@ -39,7 +39,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-  function handleLoginSuccess(response) { 
+  function handleLoginSuccess(response) {
     var message = 'You have been successfully logged in.';
     $('#flash').html(message);
   };

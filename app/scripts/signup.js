@@ -26,7 +26,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-  function handleSuccess(response) { 
+  function handleSuccess(response) {
     var message = 'Your account has been successfully created. Please Login to continue.';
     $('#flash').html(message);
   };
