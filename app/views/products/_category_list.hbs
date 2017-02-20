@@ -1,28 +1,22 @@
 <section class="category-section">
   <div class="container container-5px">
     <div class="row">
-      <ul>
-        <!-- {{#each categories}}
-          <li>
-            <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
-              {{name}}
-            </a>
-
-            <p><img src="../images/category_{{id}}.jpg" /></p>
-
-          </li>
-        {{/each}} -->
-        {{#each categoryName}}
-          <li>
-          <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
-              <span class="name">{{name}}</span><br />
-              <p><img src="../images/category_{{id}}.jpg" /></p>
-             <!--  pretty name: {{pretty_name}}<br />
-              ID: {{id}}<br />
-              Parent ID: {{parent_id}} -->
-          </a>
-          </li>
-        {{/each}}
+      <h3 class="decorated-heading">
+        Selected Categories
+      </h3>
+      {{#each categoryName}}
+        <div class="col-md-4 category-item">
+        <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
+            <p>
+              <img src="../images/category_{{id}}.jpg" />
+              <span class="category-name">{{name}}</span>
+            </p>
+           <!--  pretty name: {{pretty_name}}<br />
+            ID: {{id}}<br />
+            Parent ID: {{parent_id}} -->
+        </a>
+        </div>
+      {{/each}}
 
 
       </ul>

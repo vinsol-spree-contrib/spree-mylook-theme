@@ -13,6 +13,7 @@ Handlebars.registerHelper('productCategoryUrl', function(id) {
 Handlebars.registerHelper('getChildCategories', function(allCategories, parentId) {
   var categories = []
   $.each(allCategories, function(index, category){
+    alert (category.parentId);
     if(category.parentId === parentId){
       categories.push(category)
     }
