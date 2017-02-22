@@ -2,38 +2,45 @@
   {{> header}}
   <section class="category-section">
     <div class="container">
-      {{#each products}}
-        <div class="col-md-3 text-center col-5px">
-          <div class="product-container">
-            <p>
-              <img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full">
-            </p>
-            <h3 class="product-name">
-              <a href={{#productUrl id}}{{body}}{{/productUrl}}>{{name}}</a>
-            </h3>
-            <p>
-              {{#each category_name}}
-                <li>
-                  {{name}} : {{value}}
-                </li>
-              {{/each}}
-            </p>
-            <div class="product-container-inner">
-              <div class="product-options text-center">
-                <p>
-                  <a href="javascript:void(0);">
-                    <i class="icons icon-shopping-cart"></i>
-                  </a>
-                  <a href="javascript:void(0);">
-                    <i class="icons icon-favorite"></i>
-                  </a>
-                </p>
-                <p class="product-price">{{price}}</p>
+      <div class="col-md-3 left-content col-5px">
+        {{> filters}}
+      </div>
+      <div class="col-md-9 text-center col-5px">
+        {{> sub_category_banner}}
+        <h2 class="category-title">Kurties &amp; suits</h2>
+        {{#each products}}
+          <div class="col-md-4 text-center col-5px">
+            <div class="product-container">
+              <p>
+                <img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full">
+              </p>
+              <h3 class="product-name">
+                <a href={{#productUrl id}}{{body}}{{/productUrl}}>{{name}}</a>
+              </h3>
+              <p>
+                {{#each category_name}}
+                  <li>
+                    {{name}} : {{value}}
+                  </li>
+                {{/each}}
+              </p>
+              <div class="product-container-inner">
+                <div class="product-options text-center">
+                  <p>
+                    <a href="javascript:void(0);">
+                      <i class="icons icon-shopping-cart"></i>
+                    </a>
+                    <a href="javascript:void(0);">
+                      <i class="icons icon-favorite"></i>
+                    </a>
+                  </p>
+                  <p class="product-price">{{price}}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      {{/each}}
+        {{/each}}
+      </div>
     </div>
   </section>
   {{> recently_viewed}}

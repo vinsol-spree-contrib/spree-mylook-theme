@@ -27,7 +27,7 @@ function renderFreshArrivalPage(responseText){
 };
 
 function renderCategoryPage(responseText) {
-  document.querySelector('#wrapper').innerHTML = MyApp.html.categories({categories: responseText['taxonomies'], categoryName: responseText.taxons});
+  document.querySelector('#wrapper').innerHTML = MyApp.html.categories({products: responseText['products'], images: responseText['images'], categories: responseText['taxonomies'], categoryName: responseText.taxons});
 };
 
 function renderCategoryProductsPage(responseText) {
@@ -73,4 +73,4 @@ function renderTemplate() {
   }
 }
 
-renderTemplate()
+renderTemplate();

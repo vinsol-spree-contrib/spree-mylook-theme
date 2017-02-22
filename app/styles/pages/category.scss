@@ -9,3 +9,195 @@
     }
   }
 }
+.show_page {
+  .category-section {
+    h2 {
+      &.category-title {
+        padding: 5px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px dotted $primary-black;
+        text-align: left;
+        font-size: 20px;
+      }
+    }
+    .left-content {
+      section {
+        width: 160px;
+      }
+      h2 {
+        padding: 7px 10px 6px;
+        margin-bottom: 20px;
+        background-color: $primary-black;
+        color: $primary-white;
+        box-shadow: 4px 4px 0px #bbb;
+        font-size: 16px;
+        text-align: center;
+      }
+      ul {
+        @include genericStyles('margin', 0);
+        @include genericStyles('padding', 0);
+        li {
+          list-style: none;
+        }
+      }
+      .filter {
+        &.brand {
+          label {
+            span {
+              color: #999;
+              font-size: 13px;
+            }
+          }
+        }
+        &.price-range {
+          margin: 50px 0;
+          h2 {
+            margin-bottom: 30px;
+          }
+          #slider-range {
+            .ui-slider-range {
+              background-color: #b0b0b0;
+              border-color: #b0b0b0;
+              height: 9px;
+              border-radius: 0;
+            }
+            .ui-slider-handle {
+              background-color: #cb2027;
+              width: 8px;
+              border-color: #cb2027;
+            }
+          }
+          .price-values {
+            overflow: hidden;
+            color: $primary-black;
+            margin-top: 5px;
+            #amountMin,
+            #amountMax {
+              color: $primary-black;
+              font-size: 14px;
+              border: 0;
+              font-family: 'Avenir-Roman';
+              width: 40%;
+            }
+            #amountMin {
+              float: left;
+            }
+            #amountMax {
+              float: right;
+              text-align: right;
+            }
+          }
+        }
+        &.colors {
+          ul {
+            overflow: hidden;
+            li {
+              float: left;
+              width: 28px;
+              height: 28px;
+              margin: 0 5px 5px 0;
+              text-indent: -9999px;
+              cursor: pointer;
+              &:nth-child(5n+5) {
+                margin-right: 0;
+              }
+              &.orange {
+                @include genericStyles('background-color', orange);
+              }
+              &.grey {
+                @include genericStyles('background-color', grey);
+              }
+              &.light-grey {
+                @include genericStyles('background-color', #ccc);
+              }
+              &.teal {
+                @include genericStyles('background-color', #504444);
+              }
+              &.gold {
+                @include genericStyles('background-color', gold);
+              }
+              &.off-white {
+                @include genericStyles('background-color', #ddde7c);
+              }
+              &.brown {
+                @include genericStyles('background-color', #573d18);
+              }
+              &.blue {
+                @include genericStyles('background-color', #000098);
+              }
+              &.red {
+                @include genericStyles('background-color', red);
+              }
+              &.green {
+                @include genericStyles('background-color', green);
+              }
+              &.one {
+                @include genericStyles('background-color', #2f903a);
+              }
+              &.two {
+                @include genericStyles('background-color', #b07171);
+              }
+              &.three {
+                @include genericStyles('background-color', #fd8686);
+              }
+              &.four {
+                @include genericStyles('background-color', #777da3);
+              }
+              &.five {
+                @include genericStyles('background-color', #37e976);
+              }
+              &.six {
+                @include genericStyles('background-color', #b54dbb);
+              }
+              &.seven {
+                @include genericStyles('background-color', #ff4faa);
+              }
+              &.eight {
+                @include genericStyles('background-color', #831717);
+              }
+              &.nine {
+                @include genericStyles('background-color', #829a8c);
+              }
+              &.ten {
+                @include genericStyles('background-color', #d79edc);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .category-banner {
+    overflow: hidden;
+    position: relative;
+    .banner-image {
+      max-width: 100%;
+    }
+    .sub-category-list {
+      width: 100%;
+      margin-top: -50px;
+      background-color: rgba($primary-black, .5);
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      align-content: space-around;
+      .item {
+        padding: 10px 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        a {
+          color: $primary-white;
+        }
+      }
+      .divider {
+        width: 1px;
+        font-size: 0;
+        background-color: $primary-white;
+        height: 40px;
+      }
+    }
+  }
+}
