@@ -38,3 +38,12 @@
   -o-background-size: $value;
   background-size: $value;
 }
+
+@mixin flexCenter() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}

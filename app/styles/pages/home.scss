@@ -7,50 +7,41 @@ $image-url : '../../images/';
   width: 100%;
   z-index: 0;
   padding-top: 60px;
-  @include genericSidesStyles('top', -60px, 'margin');
+  margin-top: -60px;
   .item {
     height: 600px;
-    @include genericSidesStyles('top', 80px, 'padding');
+    padding-top: 80px;
   }
   .item01 {
     background: url($image-url + 'banner_01.png') no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include bgSize('cover');
   }
   .item02 {
     background: url($image-url + 'banner_02.png') no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include bgSize('cover');
   }
   .item03 {
     background: url($image-url + 'banner_03.png') no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include bgSize('cover');
   }
   .box-outer {
-    @include genericSidesStyles('', 1px solid $primary-black, 'border');
-    @include rotate(45)
+    border: 1px solid $primary-black;
+    @include rotate(45);
     height: 348px;
     width: 348px;
     margin: 75px auto 0;
   }
   .box-inner {
-    @include genericSidesStyles('', 1px solid #9ea0a1, 'border');
-    @include genericSidesStyles('', 3px, 'margin');
-    @include rotate(90)
+    border: 1px solid #9ea0a1;
+    margin: 3px;
+    @include rotate(90);
     height: 340px;
     width: 340px;
     background: #c7cbcc;
     .banner-text {
-      @include genericSidesStyles('', 45px 0 0 20px, 'margin');
-      @include rotate(225);
+      margin: 45px 0 0 20px;
       font-size: 18px;
+      @include rotate(225);
       h3 {
         font-size: 20px;
       }
@@ -98,18 +89,18 @@ $image-url : '../../images/';
       z-index: 99;
       &.left {
         .icon {
-          @include genericSidesStyles('', -16px, 'top');
-          @include rotate(180);
           position: relative;
           display: inline-block;
+          top: -16px;
+          @include rotate(180);
         }
       }
     }
     .carousel-inner {
       height: 600px;
-      @include genericSidesStyles('top', -60px, 'margin');
+      margin-top: -60px;
     }
-  }  
+  }
 }
 
 .banner-content {
@@ -117,7 +108,7 @@ $image-url : '../../images/';
   display: table-cell;
   position: relative;
   z-index: 2;
-  @include genericSidesStyles('top', 60px, 'padding');
+  padding-top: 60px;
 }
 
 .banner-heading {
@@ -183,9 +174,12 @@ $image-url : '../../images/';
   position: relative;
   overflow: hidden;
   @include animate(.75s);
-  .img-full {
+  .image-container {
     width: 288px;
     height: 365px;
+    @include flexCenter();
+  }
+  .img-full {
     max-width: 100%;
     max-height: 100%;
   }
@@ -302,10 +296,10 @@ $image-url : '../../images/';
     .owl-prev::before {
       content: '';
       display: inline-block;
-      width: 0; 
-      height: 0; 
+      width: 0;
+      height: 0;
       border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent; 
+      border-bottom: 12px solid transparent;
       border-right:12px solid $primary-black;
       position: absolute;
       margin-left: -25px;
@@ -314,10 +308,10 @@ $image-url : '../../images/';
     .owl-next::after {
       content: '';
       display: inline-block;
-      width: 0; 
-      height: 0; 
+      width: 0;
+      height: 0;
       border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent; 
+      border-bottom: 12px solid transparent;
       border-left:12px solid $primary-black;
       position: absolute;
       right: -12px;

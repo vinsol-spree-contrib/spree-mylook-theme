@@ -1,5 +1,5 @@
 .primary-footer {
-  @include genericSidesStyles('top', 2px solid $primary-black, 'border');
+  border-top: 2px solid $primary-black;
   padding-top: 50px;
   color: $primary-black;
   margin-bottom: 50px;
@@ -9,7 +9,7 @@
   }
   h2 {
     font-size: 20px;
-    @include genericSidesStyles('bottom', 20px, 'margin'); 
+    @include genericSidesStyles('bottom', 20px, 'margin');
   }
   p {
     opacity: .6;

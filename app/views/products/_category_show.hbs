@@ -7,7 +7,7 @@
       {{#each products}}
         <div class="col-md-3 text-center col-5px">
           <div class="product-container">
-            <p><img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full"></p>
+            <p class="image-container"><img src={{#productImageUrl image_ids ../images}}{{body}}{{/productImageUrl}} class="img-full"></p>
             <h3 class="product-name">
               <a href={{#productUrl id}}{{body}}{{/productUrl}}>{{name}}</a>
             </h3>

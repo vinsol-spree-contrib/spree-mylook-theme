@@ -20,3 +20,13 @@ Handlebars.registerHelper('getChildCategories', function(allCategories, parentId
   });
   return categories;
 });
+
+Handlebars.registerHelper('isLoggedIn', function(options) {
+  var cookie_auth_key = "; auth_token=";
+
+  if(document.cookie.indexOf(cookie_auth_key) > -1) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+});
