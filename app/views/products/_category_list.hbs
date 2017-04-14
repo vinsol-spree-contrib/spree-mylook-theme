@@ -4,22 +4,16 @@
       <h3 class="decorated-heading">
         Selected Categories
       </h3>
-      {{#each categoryName}}
-        <div class="col-md-4 category-item">
-        <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}}>
-            <p>
-              <img src="../images/category_{{id}}.jpg" />
-              <span class="category-name">{{name}}</span>
-            </p>
-           <!--  pretty name: {{pretty_name}}<br />
-            ID: {{id}}<br />
-            Parent ID: {{parent_id}} -->
-        </a>
-        </div>
+      {{#each categories}}
+        {{#if parent_id}}
+          <div class="col-md-4 category-item">
+            <a href={{#productCategoryUrl id}}{{body}}{{/productCategoryUrl}} class="block">
+              <img src="../images/category_{{id}}.jpg" class="img-full" />
+              <h3 class="category-name">{{name}}</h3>
+            </a>
+          </div>
+        {{/if}}
       {{/each}}
-
-
-      </ul>
     </div>
   </div>
 </section>
