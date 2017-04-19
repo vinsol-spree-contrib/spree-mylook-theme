@@ -17,12 +17,18 @@
       &.cart-icon,
       &.login-btn,
       &.signup-btn {
-        margin: 0 0 0 15px;
+        margin: 0;
         padding: 0;
         line-height: inherit;
       }
+      &.cart-icon {
+        margin-left: 15px;
+      }
       &.signup-btn {
-        margin: 0 15px 0 0;
+        &:after {
+          content: '/';
+          display: inline-block;
+        }
       }
       .icon-shopping-bag {
         font-size: 20px;

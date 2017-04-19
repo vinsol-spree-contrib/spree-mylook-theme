@@ -1,0 +1,44 @@
+<section class="product-porperties">
+  <aside class="product-data">
+    <h1 class="product-title left-5">{{product.name}}</h1>
+    <h3 class="product-price left-5">{{product.display_price}}</h3>
+    <p class="product-description left-5">{{product.description}}</p>
+    <div class="clearfix variants-container">
+      {{#each product.variants_including_master_ids}}
+        {{#showProductVariants this ../variants ../images}}
+          <a href="#" class="col-md-2 product-variant {{variant.can_supply}}" data-variant-id={{variant.id}}>
+            <img src={{image.small_url}} class="img-responsive">  
+          </a>
+        {{/showProductVariants}}
+      {{/each}}
+    </div>
+    {{#each productProperties}}
+      <div class="property-list left-5">
+        <h4 class="product-property-heading">{{property_name}}</h4>
+        <p class="product-property">{{value}}</p>
+      </div>
+    {{/each}}
+  </aside>
+
+  <div class="left-5">
+    <aside class="product-btns row row-5px">
+      <div class="col-sm-6 col-5px">
+        <a href="javascript:void(0);" class="add-to-cart btn-action btn-block text-center text-uppercase">Add To Cart</a>
+      </div>
+      <div class="col-sm-6 col-5px">
+        <a href="javascript:void(0);" class="btn-action btn-dark btn-block text-center text-uppercase">Buy Now</a>
+      </div>
+    </aside>
+  </div>
+
+  <aside class="product-delivery-details left-5">
+    <p class="light-text">
+      <i class="material-icons vertical-middle">compare_arrows</i>&nbsp;
+      Returns within 20 days of placing your order.
+    </p>
+    <p class="light-text">
+      <i class="material-icons vertical-middle">motorcycle</i>&nbsp;
+      Get free delivery for orders above $49.99.
+    </p>
+  </aside>
+</section>

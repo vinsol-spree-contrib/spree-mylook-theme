@@ -1,0 +1,35 @@
+<section class="checkout-step login-step">
+  <span class="step-number">1</span>
+  <h2 class="h2">
+    Login <span class="light-text">To continue and place your order</span>
+  </h2>
+
+  <aside class="checkout-step-inner">
+    <div class="row">
+      <div class="col-md-5">
+        {{> signup}}
+      </div>
+      <div class="col-md-2 or-selection">
+        or
+      </div>
+      <div class="col-md-5">
+        <form id="guest-checkout">
+          <div class="form-group">
+            <input type="text" name="" class="form-control" placeholder="Enter Guest Email">
+          </div>
+          <div class="form-group margin-0">
+            <a href="javascript:void(0);" class="btn-block btn-action">Guest Checkout</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section class="checkout-step login-step complete hide">
+  <span class="step-number"><i class="material-icons vertical-middle">done</i></span>
+  <h2 class="h2">
+    Login <span class="light-text">You're signed in as a guest. Fill the address and order quickly!</span>
+  </h2>
+  <a href="javascript:void(0);" class="btn-change btn-action btn-dark">Change Login</a>
+</section>

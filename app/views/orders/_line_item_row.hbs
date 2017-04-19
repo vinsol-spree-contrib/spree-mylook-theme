@@ -1,0 +1,26 @@
+<div class="row line-item-row row-5px">
+  {{#showVariants this ../../../line_items ../../../variants ../../../images}}
+    <div class="col-md-6">
+      <div class="row flex-center">
+        <div class="col-md-2 text-center p-r-0">
+          <a class="variant-name" href={{#productUrl variant.id}}{{body}}{{/productUrl}}>
+            <img src="{{image.small_url}}" class="img-full" alt=" ">
+          </a>
+        </div>
+        <div class="col-md-10">
+          <a class="variant-name" href={{#productUrl variant.id}}{{body}}{{/productUrl}}>{{variant.name}}</a>
+          <p class="truncate full">{{variant.description}}</p>
+        </div>
+      </div>                            
+    </div>
+    <div class="col-md-2 text-center">
+      {{variant.display_price}}
+    </div>
+    <div class="col-md-2 text-center">
+      {{line_item.quantity}}
+    </div>
+    <div class="col-md-2 text-center">
+      ${{line_item.total}}
+    </div>
+  {{/showVariants}}
+</div>

@@ -117,3 +117,21 @@ img {
     color: $primary-hover;
   }
 }
+.scroll-top {
+  @include animate(.25s);
+  bottom: 15px;
+  color: $primary-black;
+  cursor: pointer;
+  font-size: 40px;
+  opacity: 0;
+  position: fixed;
+  right: -50px;
+  visibility: hidden;
+  z-index: 10;
+
+  &.slide-up {
+    right: 15px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

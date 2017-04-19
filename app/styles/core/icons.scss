@@ -40,42 +40,46 @@ $fonts-path: '../../fonts/icons/';
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-drop-down-arrow:before {
-  content: "\61";
-}
-.icon-facebook-social:before {
   content: "\62";
 }
-.icon-favorite:before {
+.icon-facebook-social:before {
   content: "\63";
 }
-.icon-favorite-done:before {
+.icon-favorite:before {
   content: "\64";
 }
-.icon-google-plus:before {
+.icon-favorite-done:before {
   content: "\65";
 }
-.icon-phone-contact:before {
+.icon-google-plus:before {
   content: "\66";
 }
-.icon-right-chevron:before {
+.icon-phone-contact:before {
   content: "\67";
 }
-.icon-rss:before {
+.icon-right-chevron:before {
   content: "\68";
 }
-.icon-search:before {
+.icon-rss:before {
   content: "\69";
 }
-.icon-shopping-bag:before {
+.icon-search:before {
   content: "\6a";
 }
-.icon-shopping-cart:before {
+.icon-shopping-bag:before {
   content: "\6b";
 }
-.icon-twitter:before {
+.icon-shopping-cart:before {
   content: "\6c";
 }
-.icon-youtube:before {
+.icon-top:before {
   content: "\6d";
+}
+.icon-twitter:before {
+  content: "\77";
+}
+.icon-youtube:before {
+  content: "\78";
 }

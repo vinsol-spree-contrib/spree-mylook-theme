@@ -20,6 +20,8 @@
   transition: $duration;
   -moz-transition: $duration;
   -webkit-transition: $duration;
+  -o-transition: $duration;
+  -ms-transition: $duration;
 }
 
 @mixin box-shadow($first, $second, $third, $fourth, $color) {

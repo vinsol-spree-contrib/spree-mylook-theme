@@ -1,0 +1,121 @@
+{{> search}}
+{{> header}}
+{{> login_form}}
+{{> signup_form}}
+{{> forgot_password}}
+{{> menu_container}}
+
+<section class="orders-page-wrapper">
+  <div class="container">
+    <h1 class="decorated-heading text-center">
+      <span class="text-uppercase">My Orders</span>
+    </h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 orders-inner">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+          {{#each orders}}
+            {{#isOrderComplete completed_at}}
+
+              {{> single_order_detail}}
+
+              <div class="modal fade order-details-modal" id="order-{{number}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg normal-modal" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Order-{{number}}</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h3>Shipping Address</h3>
+                          {{#showAddress ship_address_id ../../addresses}}
+                            {{> shipping_address}}
+                          {{/showAddress}}
+                        </div>
+                        <div class="col-md-6">
+                          <h3>Billing Address</h3>
+                          {{#showAddress bill_address_id ../../addresses}}
+                            {{> billing_address}}
+                          {{/showAddress}}
+                        </div>
+                      </div>
+                      <div class="row m-t-20">
+                        <div class="col-md-6">
+                          <h3>Shipments Information</h3>
+                          {{#showShipping shipment_ids ../../shipments ../../shipping_rates}}
+                            <div class="orders-container">
+                              <div class="row">
+                                <div class="col-md-4">Via <span class="pull-right">:</span></div>
+                                <div class="col-md-8 p-l-0">{{name}}</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">Rate <span class="pull-right">:</span></div>
+                                <div class="col-md-8 p-l-0">${{../shipment_total}}</div>
+                              </div>
+                            </div>
+                          {{/showShipping}}
+                        </div>
+                        <div class="col-md-6">
+                          <h3>Payment Information</h3>
+                          {{#showPayment payment_ids ../../payments ../../payment_methods}}
+                            {{> payment_information}}
+                          {{/showPayment}}
+                        </div>
+                      </div>
+
+                      <hr class="m-t-25">
+
+                      {{> line_item_header}}
+
+                      {{#each line_item_ids}}
+                        <div class="row line-item-row row-5px">
+                          {{#showVariants this ../../../line_items ../../../variants ../../../images}}
+                            <div class="col-md-6">
+                              <div class="row flex-center">
+                                <div class="col-md-2 text-center p-r-0">
+                                  <a class="variant-name" href={{#productUrl variant.id}}{{body}}{{/productUrl}}>
+                                    <img src="{{image.small_url}}" class="img-full" alt=" ">
+                                  </a>
+                                </div>
+                                <div class="col-md-10">
+                                  <a class="variant-name" href={{#productUrl variant.id}}{{body}}{{/productUrl}}>{{variant.name}}</a>
+                                  <p class="truncate full">{{variant.description}}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                              {{variant.display_price}}
+                            </div>
+                            <div class="col-md-2 text-center">
+                              {{line_item.quantity}}
+                            </div>
+                            <div class="col-md-2 text-center">
+                              ${{line_item.total}}
+                            </div>
+                          {{/showVariants}}
+                        </div>
+                        <hr>
+                      {{/each}}
+
+                      {{> order_summary_footer}}
+
+                    </div>
+
+                    <div class="modal-footer text-center">
+                      Thank you for associating with us.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            {{/isOrderComplete}}
+          {{/each}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{> footer}}
