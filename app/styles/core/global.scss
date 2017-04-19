@@ -3,6 +3,13 @@ body {
   font-weight: 400;
 }
 
+*:focus {
+  outline: 0 !important;
+  border-color: inherit !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 a {
   color: $primary-black;
   &:focus,

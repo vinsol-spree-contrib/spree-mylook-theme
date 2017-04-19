@@ -13,30 +13,26 @@
       </div>
       <div class="col-md-9 col-xs-8 text-right">
         <div class="row">
-          <div class="col-md-12"> 
-            <a href="#" class="cart-icon">
-              <i class="icon icon-shopping-bag"></i>
-            </a>
-            <a href="javascript:void(0);" data-toggle="modal" data-target="#SignupModal" class="signup-btn">
-              Signup
-            </a>
-            <span class="bar"> / </span>
-            <a href="javascript:void(0);" data-toggle="modal" data-target="#LoginModal" class="login-btn">
-              Login
-            </a>
+          <div class="col-md-12">
             <span class="currency_select">
               <a href="javascript:void(0)" class="dropdown-toggle" type="button" data-toggle="dropdown">
                 USD <i class="icon icon-drop-down-arrow"></i>
               </a>
               {{> country_list}}
-            </span>  
+            </span>
+            <span class="login-user-actions">
+              {{> login}}
+            </span>
+            <a href="#" class="cart-icon">
+              <i class="icon icon-shopping-bag"></i>
+            </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row search_bar">
           <div class="col-md-12 text-right">
             {{> search}}
           </div>
-         </div> 
+         </div>
       </div>
     </div>
   </div>
